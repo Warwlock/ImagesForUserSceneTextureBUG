@@ -1,5 +1,7 @@
 # User Scene Texture BUG Happens by Changing Resolution of Game
 
+Original Unreal Forums Post: https://forums.unrealengine.com/t/user-scene-texture-bug-happens-by-changing-resolution-of-game/2332307
+
 I tried to implement extended difference of gaussians from Acerola's Github code inside Unreal Engine: https://github.com/GarrettGunnell/Post-Processing
 
 It worked in the end but when I tried to scale the viewport in both editor and standalone play mode, spaghetti lines were appeared on edges of screen. I followed down the error to the "UserSceneTexture" nodes. I am thinking this could be a bug, because when I test the "SceneTexture:PostProcessInput0" node, spaghetti lines don't happen. Probably it happens because of UV of "UserSceneTexture" node doesn't scale with resolution.
